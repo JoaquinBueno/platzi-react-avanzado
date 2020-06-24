@@ -7,7 +7,26 @@
 </head>
 <body>
     <div id='app'>
-
     </div>
+    <noscript>
+        <h3> 
+            This app needs Javascript to work. Please,
+            allow scripts 
+        </h3>
+    </noscript>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function (){
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Registered')
+                    })
+                    .catch(registrationError => {
+                        console.log('SW error', registrationError)
+                    })
+            })
+        }
+    </script>
+
 </body>
 </html>

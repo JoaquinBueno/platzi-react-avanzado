@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://react-petgram-jb.joaquinbueno.vercel.app/",
+    "chromeWebSecurity": false,
+    "viewportWidth": 500,
+    "viewportHeight": 800
+}
